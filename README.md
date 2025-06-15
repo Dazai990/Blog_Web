@@ -1,12 +1,45 @@
-# React + Vite
+📝 Blog Website - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository contains the **frontend code** for a full-stack Blog Website where users can register, log in, read blog posts, write their own posts, and manage their content.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📖 Project Description
 
-## Expanding the ESLint configuration
+This is the frontend for a fully functional blog website where users can register, log in, and interact with blog content. Authentication is handled using a username and password system — users are only granted access if valid credentials are provided.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Once logged in, users can:
+
+- 🔓 Access the main blog interface
+- 📰 View all blog posts written by other users in a clean, responsive **grid layout**
+- ✍️ Create and publish their own blog posts
+- 📚 View all their personal posts in the **"My Blogs"** section
+- 🗑️ Delete their own posts
+
+The frontend is designed to be responsive, intuitive, and visually appealing using modern web technologies.
+
+---
+
+## 🛠 Tech Stack
+
+### 🔷 Frontend
+- **React.js**
+- **JavaScript (ES6+)**
+- **CSS3**
+- **Bootstrap 5**
+
+### 🔶 Backend
+- This project includes a backend (hosted in a separate repository or folder) that handles:
+  - User authentication
+  - Blog post CRUD operations
+  - User data management
+ 
+  - ✨ Features
+User registration and login with credential validation.
+Grid-based blog post layout.
+View blogs from all users.
+Post creation with title/content input.
+"My Blogs" section to manage user-created posts.
+Delete functionality for user-owned blogs.
+Responsive and clean UI using Bootstrap.
+---
