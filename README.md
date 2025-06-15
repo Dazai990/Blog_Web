@@ -18,7 +18,14 @@ Once logged in, users can:
 
 The frontend is designed to be responsive, intuitive, and visually appealing using modern web technologies.
 
----
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## 💬 Communication.
+
+If you have questions, feedback, or ideas about this project, feel free to use the [Discussions tab](https://github.com/Dazai990/Blog_Web/discussions) to start a conversation.
+
+> 🔐 **Requesting Backend Access:**  
+> The backend code is not public. However, if you're interested in accessing it for learning or collaboration purposes, you can request access by starting a discussion in the appropriate category.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## 🛠 Tech Stack
 
@@ -29,6 +36,14 @@ The frontend is designed to be responsive, intuitive, and visually appealing usi
 - **Bootstrap 5**
 
 ### 🔶 Backend
+**Node.js**
+- **Express.js**
+- **MongoDB** with **Mongoose**
+- **bcrypt** – Password hashing
+- **JWT** – Token-based authentication
+- **CORS** and **Helmet** – Security middleware
+- **dotenv** – Environment variable management
+  
 - This project includes a backend (hosted in a separate repository or folder) that handles:
   - User authentication
   - Blog post CRUD operations
