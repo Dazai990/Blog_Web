@@ -3,6 +3,7 @@
 This repository contains the **frontend code** for a full-stack Blog Website where users can register, log in, read blog posts, write their own posts, and manage their content.
 
 🔐 Requesting Backend Access:
+
 The backend code is not public. However, if you're interested in accessing it for learning or collaboration purposes, you can request access by starting a discussion in the appropriate category.
 
 ---
