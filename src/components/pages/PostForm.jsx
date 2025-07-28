@@ -5,7 +5,6 @@ import { IoMdArrowBack } from "react-icons/io";
 const PostForm = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-  const [authorName, setAuthorName] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
 
@@ -30,7 +29,6 @@ const PostForm = () => {
         body: JSON.stringify({
           title: title.trim(),
           content: content.trim(),
-          authorName: authorName.trim(),
         }),
       });
 
@@ -45,7 +43,6 @@ const PostForm = () => {
       await res.json();
       setTitle('');
       setContent('');
-      setAuthorName('');
       alert('Your Post uploaded successfully');
       navigate("/home");
     } catch (error) {
@@ -60,7 +57,7 @@ const PostForm = () => {
   };
 
   return (
-    <div style={{backgroundColor:'#fffef3', minHeight: '100vh', padding: '20px', boxSizing: 'border-box' }}>
+    <div style={{ backgroundColor: '#fffef3', minHeight: '100vh', padding: '20px', boxSizing: 'border-box' }}>
       <div className="container mt-3">
         <div className="position-relative">
           <button className="btn btn-warning top-0 start-0 position-absolute m-2" onClick={handleNavigate}>
@@ -68,21 +65,10 @@ const PostForm = () => {
           </button>
         </div>
         <form onSubmit={handleSubmit}>
-          <h3 style={{fontFamily:'cursive'}}>Create New Post</h3>
+          <h3 style={{ fontFamily: 'cursive' }}>Create New Post</h3>
           <div className="mb-4 mt-5 border border-secondary">
             <input
-              style={{backgroundColor:'#ddf6d2'}}
-              className="form-control text-capitalize custom-font"
-              type="text"
-              placeholder="Author Name"
-              value={authorName}
-              onChange={(e) => setAuthorName(e.target.value)}
-              required
-            />
-          </div>
-          <div className="mb-4 border border-secondary">
-            <input
-              style={{backgroundColor:'#ddf6d2'}}
+              style={{ backgroundColor: '#ddf6d2' }}
               className="form-control text-capitalize custom-font"
               type="text"
               placeholder="Preferred Title"
@@ -93,7 +79,7 @@ const PostForm = () => {
           </div>
           <div className="mb-5 border border-secondary">
             <textarea
-              style={{backgroundColor:'#ddf6d2', height:'140px'}}
+              style={{ backgroundColor: '#ddf6d2', height: '140px' }}
               className="form-control text-capitalize custom-font"
               placeholder="Content"
               value={content}
