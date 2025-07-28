@@ -16,12 +16,12 @@ function MyPosts() {
     }
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/posts/my-posts`, {
-        method: 'GET',
-        headers: {
-          'Authorization': `Bearer ${token}`,
-        },
-      });
+     const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/posts/my-posts`, {
+     method: 'GET',
+     headers: {
+    'Authorization': `Bearer ${token}`,
+    },
+    });
 
       if (!response.ok) {
         throw new Error('Failed to fetch posts Login Again!');
@@ -50,12 +50,12 @@ function MyPosts() {
 
     const token = localStorage.getItem('token'); 
     try {
-     const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/posts/${postId}`, {
-        method: 'DELETE',
-        headers: {
-          'Authorization': `Bearer ${token}`,
-        },
-      });
+    const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/posts/${postId}`, {
+     method: 'DELETE',
+     headers: {
+    'Authorization': `Bearer ${token}`,
+    },
+    });
 
       if (res.ok) {
         // setPosts(posts.filter((post) => post._id !== postId)); // Remove post from the state
