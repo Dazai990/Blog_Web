@@ -16,7 +16,7 @@ function MyPosts() {
     }
 
     try {
-      const response = await fetch('http://localhost:4000/api/posts/my-posts', {
+      const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/posts/my-posts`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -50,7 +50,7 @@ function MyPosts() {
 
     const token = localStorage.getItem('token'); 
     try {
-      const res = await fetch(`http://localhost:4000/api/posts/${postId}`, {
+     const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/posts/${postId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,

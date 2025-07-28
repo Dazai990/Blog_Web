@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { IoMdArrowBack } from "react-icons/io";
 import { FaArrowUp } from "react-icons/fa";
 
-const blogURL = 'http://localhost:4000/api/posts';
+const blogURL = import.meta.env.VITE_API_BASE_URL;
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
