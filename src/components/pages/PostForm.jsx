@@ -9,37 +9,48 @@ const PostForm = () => {
   const [authorName, setAuthorName] = useState('')
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+ const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    const token = localStorage.getItem("token");
-    if (!token) {
-      alert("You must log in to create a post.");
-      return;
-    }
+  const token = localStorage.getItem("token");
+  if (!token) {
+    alert("You must log in to create a post.");
+    return;
+  }
 
-    const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/posts/new`, {
+  try {
+    const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/posts/new`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify({ title, content,authorName }),
+      body: JSON.stringify({ title, content, authorName }),
     });
 
-    const data = await res.json();
-
-    if (res.ok) {
-    //   onPostCreated(data);
-      setTitle('');
-      setContent('');
-      setAuthorName('');
-      alert('Your Post uploaded sccessfully' )
-      navigate("/home");
-    } else {
-      alert(data.error || "Failed to create post");
+    // If response is not OK, read the plain text (likely HTML error page)
+    if (!res.ok) {
+      const errorText = await res.text();
+      console.error("Server error:", errorText);
+      alert("Failed to create post. Check console for details.");
+      return;
     }
-  };
+
+    // Only try to parse JSON if response is OK
+    await res.json();
+
+    setTitle('');
+    setContent('');
+    setAuthorName('');
+    alert('Your Post uploaded successfully');
+    navigate("/home");
+
+  } catch (error) {
+    console.error("Fetch failed:", error);
+    alert("Something went wrong. Please try again.");
+  }
+};
+
   const handleNavigate = ()=>{
     navigate('/home');
   }
