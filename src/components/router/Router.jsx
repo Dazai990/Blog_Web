@@ -25,4 +25,4 @@ const RouterMain = ()=>{
         </BrowserRouter>
     )
 }
-export default RouterMain
+export default RouterMain;
