@@ -4,10 +4,21 @@
   /* padding: 2rem; */
   text-align: center;
 }
+
 .custom-font{
   font-family: "Oswald", sans-serif;
   font-size: 18px;
 }
+
+/* FORCE link color + no underline everywhere */
+a,
+a:visited,
+a:hover,
+a:active {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
 
 .font-roboto-condensed {
   font-family: "Roboto Condensed", sans-serif;

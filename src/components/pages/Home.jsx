@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Navbar from "./Navbar";
 import { Link, useNavigate } from "react-router-dom";
 import { IoLogoFacebook, IoLogoTwitter, IoLogoGithub } from "react-icons/io";
 
@@ -31,131 +32,8 @@ const Home = () => {
 
   return (
     <div className="font-oswald" style={{ backgroundColor: "#FFE5ED" }}>
-      <nav
-        style={{ height: "280px" }}
-        className="navbar navbar-expand-lg p-0 position-relative navbar-background border border-bottom border-dark border-2"
-      >
-        <div className="container-fluid h-100 d-flex flex-column justify-content-end align-items-center">
-          <div
-            className="position-absolute font-oswald top-0 start-0 text-dark p-3 d-flex align-items-center"
-            style={{
-              fontSize: "29px",
-              
-              fontWeight:"normal",
-            }}
-          >
-            <img
-              src="/a-logo.png"
-              alt="Logo"
-              style={{
-                height: "45px",
-                width: "45px",
-                objectFit: "cover",
-                marginRight: "10px",
-                backgroundColor: "#EAF6FF",
-                borderRadius: "14px",
-              }}
-            />
-            <span
-              style={{
-                color: "white",
-                
-                fontSize: "33px",
-              }}
-            >
-              Mon@r7
-            </span>
-          </div>
-
-          <ul
-            style={{ fontWeight: "normal" }}
-            className="navbar-nav flex-row flex-wrap justify-content-center gap-5 mb-4"
-          >
-            <li className="nav-item">
-              <Link
-                style={{
-                  
-                  fontSize: "25px",
-                  color: "white",
-                }}
-                className="nav-link"
-                to="/about"
-              >
-                About
-              </Link>
-            </li>
-            <li className="nav-item">
-              <a
-                style={{
-                  
-                  fontSize: "25px",
-                  color: "white",
-                }}
-                className="nav-link"
-                href="#contact"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToOptions("contact");
-                }}
-              >
-                Contacts
-              </a>
-            </li>
-            <li className="nav-item">
-              <Link
-                style={{
-                  
-                  fontSize: "25px",
-                  color: "white",
-                }}
-                className="nav-link"
-                to="/all-blog"
-              >
-                All Blogs
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                style={{
-                  
-                  fontSize: "25px",
-                  color: "white",
-                }}
-                className="nav-link"
-                to="/create-blog"
-              >
-                Create New Blog
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                style={{
-                  
-                  fontSize: "25px",
-                  color: "white",
-                }}
-                className="nav-link"
-                to="/my-blog"
-              >
-                My Blogs
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                style={{
-                  
-                  fontSize: "25px",
-                  color: "white",
-                }}
-                className="nav-link"
-                to="/"
-              >
-                Sign out
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      
+      <Navbar scrollToOptions={scrollToOptions} />
 
       <div className="container mt-4">
         {/* Top 5 Cards */}
