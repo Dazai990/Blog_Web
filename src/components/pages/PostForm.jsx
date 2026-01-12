@@ -65,7 +65,7 @@ const PostForm = () => {
           </button>
         </div>
         <form onSubmit={handleSubmit}>
-          <h3 style={{ fontFamily: 'cursive' }}>Create New Post</h3>
+          <h3 className="font-oswald">Create New Post</h3>
           <div className="mb-4 mt-5 border border-secondary">
             <input
               style={{ backgroundColor: '#ddf6d2' }}

@@ -88,7 +88,7 @@ const Blogs = () => {
           </button>
         </div>
 
-        <h2 style={{ fontFamily: 'cursive', fontSize: '36px' }} className="mb-4 text-primary">All Blogs</h2>
+        <h2 style={{ fontSize: '36px' }} className="mb-4 font-oswald text-primary">All Blogs</h2>
 
         {error && <div className="alert alert-danger">{error}</div>}
 

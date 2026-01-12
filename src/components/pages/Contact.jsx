@@ -40,7 +40,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="container my-5">
+    <div className="container my-5 font-oswald">
          <div className="position-relative">
                       <button className="btn btn-warning top-0 start-0 position-absolute m-2" onClick={handleNavigate}>
                         <IoMdArrowBack />

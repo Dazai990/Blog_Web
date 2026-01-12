@@ -30,18 +30,18 @@ const Home = () => {
   };
 
   return (
-    <div style={{ backgroundColor: "#FFE5ED" }}>
+    <div className="font-oswald" style={{ backgroundColor: "#FFE5ED" }}>
       <nav
         style={{ height: "280px" }}
         className="navbar navbar-expand-lg p-0 position-relative navbar-background border border-bottom border-dark border-2"
       >
         <div className="container-fluid h-100 d-flex flex-column justify-content-end align-items-center">
           <div
-            className="position-absolute top-0 start-0 text-dark p-3 d-flex align-items-center"
+            className="position-absolute font-oswald top-0 start-0 text-dark p-3 d-flex align-items-center"
             style={{
               fontSize: "29px",
-              fontFamily: "cursive",
-              fontWeight: "bold",
+              
+              fontWeight:"normal",
             }}
           >
             <img
@@ -59,7 +59,7 @@ const Home = () => {
             <span
               style={{
                 color: "white",
-                fontFamily: "cursive",
+                
                 fontSize: "33px",
               }}
             >
@@ -68,14 +68,14 @@ const Home = () => {
           </div>
 
           <ul
-            style={{ fontWeight: "bolder" }}
+            style={{ fontWeight: "normal" }}
             className="navbar-nav flex-row flex-wrap justify-content-center gap-5 mb-4"
           >
             <li className="nav-item">
               <Link
                 style={{
-                  fontFamily: "cursive",
-                  fontSize: "20px",
+                  
+                  fontSize: "25px",
                   color: "white",
                 }}
                 className="nav-link"
@@ -87,8 +87,8 @@ const Home = () => {
             <li className="nav-item">
               <a
                 style={{
-                  fontFamily: "cursive",
-                  fontSize: "20px",
+                  
+                  fontSize: "25px",
                   color: "white",
                 }}
                 className="nav-link"
@@ -104,8 +104,8 @@ const Home = () => {
             <li className="nav-item">
               <Link
                 style={{
-                  fontFamily: "cursive",
-                  fontSize: "21px",
+                  
+                  fontSize: "25px",
                   color: "white",
                 }}
                 className="nav-link"
@@ -117,8 +117,8 @@ const Home = () => {
             <li className="nav-item">
               <Link
                 style={{
-                  fontFamily: "cursive",
-                  fontSize: "20px",
+                  
+                  fontSize: "25px",
                   color: "white",
                 }}
                 className="nav-link"
@@ -130,8 +130,8 @@ const Home = () => {
             <li className="nav-item">
               <Link
                 style={{
-                  fontFamily: "cursive",
-                  fontSize: "20px",
+                  
+                  fontSize: "25px",
                   color: "white",
                 }}
                 className="nav-link"
@@ -143,8 +143,8 @@ const Home = () => {
             <li className="nav-item">
               <Link
                 style={{
-                  fontFamily: "cursive",
-                  fontSize: "20px",
+                  
+                  fontSize: "25px",
                   color: "white",
                 }}
                 className="nav-link"
@@ -283,21 +283,21 @@ const Home = () => {
         }}
       >
         <div className="container">
-          <h2 className="mb-3" style={{ fontFamily: "cursive" }}>
+          <h2 className="mb-3 font-oswald">
             Details
           </h2>
           <div className="d-flex gap-4 justify-content-center">
             <a
               className="text-white text-decoration-none fs-5"
               href="/about"
-              style={{ fontFamily: "cursive", fontSize: "17px" }}
+              style={{  fontSize: "17px" }}
             >
               About
             </a>
             <a
               className="text-white text-decoration-none fs-5"
               href="/contact"
-              style={{ fontFamily: "cursive", fontSize: "17px" }}
+              style={{  fontSize: "17px" }}
             >
               Contact Us
             </a>

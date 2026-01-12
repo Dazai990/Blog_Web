@@ -84,7 +84,7 @@ function MyPosts() {
           <IoMdArrowBack />
         </button>
       </div>
-      <h2 className='mb-4 mt-3' style={{ fontFamily: 'cursive' }}>My Posts</h2>
+      <h2 className='mb-4 mt-3 font-oswald'>My Posts</h2>
       {posts.length === 0 ? (
         <p style={{ fontFamily: 'monospace' }}>No Posts found.</p>
       ) : (
@@ -103,12 +103,12 @@ function MyPosts() {
           >
             <h3 className='text-capitalize custom-font border-bottom'>Title: &nbsp; {post.title}</h3>
             <p>
-              <i style={{ fontFamily: 'cursive' }} className='text-capitalize'>Author: &nbsp; {post.author?.username}</i>
+              <i style={{ fontFamily: 'cursive' }} className='text-capitalize font-oswald'>Author: &nbsp; {post.author?.username}</i>
             </p>
 
             {expandedPostId === post._id && (
               <>
-                <p className='card-text text-capitalize custom-font'>Contents: &nbsp; {post.content}</p>
+                <p className='card-text text-capitalize custom-font font-oswald'>Contents: &nbsp; {post.content}</p>
                 <button
                   className='btn btn-danger'
                   onClick={(e) => {
