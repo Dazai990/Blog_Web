@@ -103,19 +103,19 @@ function MyPosts() {
           >
             <h3 className='text-capitalize custom-font border-bottom'>Title: &nbsp; {post.title}</h3>
             <p>
-              <i style={{ fontFamily: 'cursive' }} className='text-capitalize font-oswald'>Author: &nbsp; {post.author?.username}</i>
+              <h4 className='font-oswald text-xl underline text-capitalize font-oswald'>Author: &nbsp; {post.author?.username}</h4>
             </p>
 
             {expandedPostId === post._id && (
               <>
                 <p className='card-text text-capitalize custom-font font-oswald'>Contents: &nbsp; {post.content}</p>
                 <button
-                  className='btn btn-danger'
+                  className='btn btn-danger font-oswald'
                   onClick={(e) => {
                     e.stopPropagation();
                     handleDelete(post._id);
                   }}
-                  style={{ color: 'white', fontFamily: 'cursive' }}
+                  style={{ color: 'white'}}
                 >
                   Delete
                 </button>

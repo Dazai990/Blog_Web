@@ -25,7 +25,7 @@ const Navbar = ({ scrollToOptions }) => {
             alt="Logo"
             className="h-11 w-11 rounded-xl bg-[#EAF6FF] object-cover"
           />
-          <span className="text-xl tracking-wide font-medium">
+          <span className="text-xl text-white hover:scale-105 transition ease-in-out tracking-wide font-medium">
             Mon@r7
           </span>
         </Link>
@@ -40,12 +40,12 @@ const Navbar = ({ scrollToOptions }) => {
                 <Link
                   to={link.to}
                   className={`relative transition-opacity duration-200 ${
-                    isActive ? "opacity-100" : "opacity-80 hover:opacity-100"
+                    isActive ? "opacity-100 " : "opacity-80 hover:opacity-100"
                   }`}
                 >
                   {link.name}
                   {isActive && (
-                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-white rounded-full" />
+                    <span className="absolute  -bottom-1 left-0 w-full h-0.5 bg-white rounded-full" />
                   )}
                 </Link>
               </li>

@@ -4,10 +4,15 @@ import { useNavigate } from "react-router-dom";
 const Login=()=>{
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
+    const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
     const handleLogin = async (e)=>{
         e.preventDefault();
+        setLoading(true);
+        try{
+
+        
         const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/auth/login`, {
             method:'POST',
             headers:{'Content-Type':'application/json'},
@@ -16,14 +21,37 @@ const Login=()=>{
         const data = await res.json();
         if (res.ok) {
             localStorage.setItem('token',data.token);
-            alert('Login Successful');
+            // alert('Login Successful');
              navigate('/home')
         }else{
             alert(data.error || 'Login failed.');
         }
+      } catch{
+        alert('Something went wrong. Please try again!');
+      }finally {
+        setLoading(false);
+      }
     };
 
     return (
+      <>
+      
+     {loading && (
+  <div
+    className="position-fixed top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center"
+    style={{
+      background: "rgba(0, 0, 0, 0.6)",
+      backdropFilter: "blur(6px)",
+      zIndex: 9999,
+    }}
+  >
+    <div className="spinner-border text-warning mb-3" role="status">
+      <span className="visually-hidden">Loading...</span>
+    </div>
+    <p className="text-white fs-5">Please wait a moment…</p>
+  </div>
+)}
+
   <div
     className="d-flex justify-content-center align-items-center min-vh-100"
     style={{
@@ -77,15 +105,19 @@ const Login=()=>{
         </div>
 
         <div className="d-grid">
-          <button type="submit" className="btn btn-warning fw-bold shadow-sm">
-            <i className="bi bi-box-arrow-in-right me-2"></i> Login
+          <button type="submit" className="btn btn-warning fw-bold shadow-sm" disabled={loading}>
+            {loading ? "Logging in ..." : (
+              <>
+              <i className="bi bi-box-arrow-in-right me-2"></i> Login
+              </>
+            )}
           </button>
         </div>
       </form>
 
       <div className="text-center mt-3">
         <small className="text-white-50">
-          Don’t have an account?{" "}
+          Don't have an account?{" "}
           <a href="/register" className="text-warning fw-semibold text-decoration-none">
             Register
           </a>
@@ -93,6 +125,7 @@ const Login=()=>{
       </div>
     </div>
   </div>
+   </>
 );
 
 
