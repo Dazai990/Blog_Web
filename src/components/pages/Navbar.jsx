@@ -20,13 +20,13 @@ const Navbar = ({ scrollToOptions }) => {
 
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 text-white">
-          <img
+          {/* <img
             src="/a-logo.png"
             alt="Logo"
             className="h-11 w-11 rounded-xl bg-[#EAF6FF] object-cover"
-          />
-          <span className="text-xl text-white hover:scale-105 transition ease-in-out tracking-wide font-medium">
-            Mon@r7
+          /> */}
+          <span className="text-4xl font-['Telma'] text-white hover:scale-105 transition ease-in-out tracking-wide font-medium">
+            Monar7
           </span>
         </Link>
 
